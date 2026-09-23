@@ -1,0 +1,31 @@
+{
+  "name": "@vietflex/webgis",
+  "version": "0.1.0",
+  "description": "Reusable MapLibre/Turf WebGIS SDK for Vietflex",
+  "type": "module",
+  "sideEffects": false,
+  "files": ["dist"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {"maplibre-gl": ">=5.0.0"},
+  "dependencies": {"@turf/turf": "^7.0.0"},
+  "devDependencies": {
+    "maplibre-gl": "^5.22.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
+  },
+  "license": "MIT"
+}

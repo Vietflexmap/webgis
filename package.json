@@ -1,0 +1,11 @@
+{
+  "name": "vietflex-webgis-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["packages/webgis", "examples/basic"],
+  "scripts": {
+    "build": "npm run build -w @vietflex/webgis && npm run build -w @vietflex/webgis-example",
+    "test": "npm run test -w @vietflex/webgis",
+    "typecheck": "npm run typecheck -w @vietflex/webgis"
+  }
+}
