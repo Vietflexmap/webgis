@@ -26,8 +26,7 @@ export function createMap(options: VietflexMapOptions): Map {
     map.addControl(
       new maplibregl.GeolocateControl({
         positionOptions: { enableHighAccuracy: true },
-        trackUserLocation: true,
-        showUserHeading: true
+        trackUserLocation: true
       }),
       "top-right"
     );
